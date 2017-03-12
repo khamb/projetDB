@@ -20,11 +20,9 @@ create table if not exists organisation_schema.GestionnaireLigue(
   courriel varchar(20),
   idLigue varchar(20),
   idEmploye varchar(20),
-  idSaison varchar(20),
   primary key(idGestionnaire),
   foreign key (idLigue) references organisation_schema.Ligue(idLigue),
   foreign key (idEmploye) references organisation_schema.Employe(idEmploye),
-  foreign key (idSaison) references organisation_schema.Ligue(idSaison)
 
   );
 

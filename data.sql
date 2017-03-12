@@ -70,9 +70,8 @@ insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, id
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j22', 'Louis', 'Thompson', 'lthompsonl@sbwire.com', '86-(315)230-6854', '');
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j23', 'Keith', 'Webb', 'kwebbm@cbslocal.com', '33-(549)577-7115', '');
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j24', 'George', 'Cox', 'gcoxn@yale.edu', '506-(153)644-7326','');
-
 --modififer les mails et numeros!!!!!!!!!!!!
-insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j25', 'Stephanie', 'Walker', 'apaynej@miibeian.gov.cn', '358-(329)287-0288', 'e7');
+insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j25', 'Stephanie', 'Walker', 'walkj@miibeian.gov.cn', '358-(329)287-0288', 'e7');
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j26', 'Jose', 'Williamson', 'aasaj@miibeian.gov.cn', '358-(329)287-0488', 'e8');
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j27', 'Fred', 'Diaz', 'apffej@miibeian.gov.cn', '358-(329)287-0488', 'e9');
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j28', 'Ashley', 'Diaz', 'dff@miibeian.gov.cn', '358-(329)287-0488', 'e10');
@@ -121,3 +120,11 @@ insert into organisation_schema.Match (idMatch, dateMatch, heure, lieu, idSaison
 insert into organisation_schema.Match (idMatch, dateMatch, heure, lieu, idSaison, idTournoi) values ('m5', '10/17/2016', '12:47 PM', 'Indiana', null, 'T001');
 insert into organisation_schema.Match (idMatch, dateMatch, heure, lieu, idSaison, idTournoi) values ('m6', '2/26/2017', '7:12 AM', 'Alaska', null, 'T002');
 insert into organisation_schema.Match (idMatch, dateMatch, heure, lieu, idSaison, idTournoi) values ('m7', '5/19/2016', '6:13 AM', 'California', null, 'T002');
+
+
+insert into organisation_schema.Match (idGestionnaire, tel, courriel, idEmploye, idLigue) values ('GL1', null, null, 'e1', 'L001');
+insert into organisation_schema.Match (idGestionnaire, tel, courriel, idEmploye, idLigue) values ('GL2', null, null, 'e20', 'L002');
+insert into organisation_schema.Match (idGestionnaire, tel, courriel, idEmploye, idLigue) values ('GL3', '1-(781)311-2111', null, 'e21', 'L003');
+insert into organisation_schema.Match (idGestionnaire, tel, courriel, idEmploye, idLigue) values ('GL4', '358-(329)287-0288', 'walkj@miibeian.gov.cn', 'e7', 'L004');
+
+--il reste equipe 
