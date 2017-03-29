@@ -294,6 +294,7 @@
       # code...
     break;
   }
+  //fin affiche resultats requete
 
 
  ?>

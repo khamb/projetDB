@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <!-- Optional theme -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="jquery-3.2.0.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title> Projet de Fabrice & Khadim</title>
   </head>
@@ -35,7 +35,7 @@
 
     <nav class="navbar navbar-default">
       <div class="container">
-          <i class="navbar-brand" style="color: #33cc33;">*Fabrice & Khadim*</i>
+          <i class="navbar-brand" >Fabrice & Khadim</i>
           <ul class="nav nav-pills">
             <li class="active"><a href="#"  id='affEmpButton'>Employes</a></li>
             <li class=""><a href="#" id='affJouButton'>Joueurs</a></li>

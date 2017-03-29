@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   $('#affEmpButton').on('click', function(event) {
     $.get('afficheEmploye.php', function(data, status){
-      $('#corps ').html(data);
+      $("#corps").html(data);
     });
   });
 
