@@ -74,10 +74,10 @@ insert into organisation_schema.Sport (idSport, nom, description) values ('sp2',
 insert into organisation_schema.Sport (idSport, nom, description) values ('sp3', 'Hockey', 'Le Hockey est un sport déquipe se jouant sur une patinoire spécialement aménagée.');
 insert into organisation_schema.Sport (idSport, nom, description) values ('sp4', 'Volley', 'est un sport collectif mettant en jeu deux équipes de six joueurs2 séparés par un filet, qui saffrontent avec un ballon a laide des mains');
 
-insert into organisation_schema.Ligue (idLigue, difficulte, idSport) values ('L001', 'recreatif', 'sp4');
+insert into organisation_schema.Ligue (idLigue, difficulte, idSport) values ('L001', 'recreatif', 'sp1');
 insert into organisation_schema.Ligue (idLigue, difficulte, idSport) values ('L002', 'recreatif', 'sp2');
 insert into organisation_schema.Ligue (idLigue, difficulte, idSport) values ('L003', 'recreatif', 'sp3');
-insert into organisation_schema.Ligue (idLigue, difficulte, idSport) values ('L004', 'competitif', 'sp1');
+insert into organisation_schema.Ligue (idLigue, difficulte, idSport) values ('L004', 'competitif', 'sp4');
 
 
 insert into organisation_schema.Saison (idSaison, dateLimitePaiement, dateDebut, dateFin, nbreMatch, idLigue) values ('S001', '1/3/2017', '1/23/2017', '11/30/2017', 6, 'L001');
@@ -185,6 +185,11 @@ insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j30',
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j31', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j32', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j33', 'eq2');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j7', 'eq2');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j8', 'eq2');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j1', 'eq2');
+
+
 
 
 --Commanditaire (idCommandit, nom, tel, contribution, idTournoi)
