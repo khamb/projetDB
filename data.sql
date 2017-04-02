@@ -167,9 +167,6 @@ insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j15',
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j16', 'eq1');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j17', 'eq1');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j18', 'eq1');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j16', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j17', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j18', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j19', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j20', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j21', 'eq2');
@@ -225,16 +222,3 @@ insert into organisation_schema.ArbitreSportPrefere (idArbitre, idSport) values 
 insert into organisation_schema.ArbitreSportPrefere (idArbitre, idSport) values ('a3', 'sp2');
 insert into organisation_schema.ArbitreSportPrefere (idArbitre, idSport) values ('a4', 'sp4');
 insert into organisation_schema.ArbitreSportPrefere (idArbitre, idSport) values ('a5', 'sp3');
-
-
-
-
-
-
-
-
-
-
-
-
-

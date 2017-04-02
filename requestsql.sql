@@ -41,10 +41,14 @@ where ddate = '2016-03-14' and lieu not like 'Kansas'
 
 --8. Combien de joueurs sont inscrits à la fois à une équipe dans une 
 -- ligue de basketball et une équipe dans une ligue de soccer?
-select count(q.idjoueur)  from organisation_schema.equipe e, organisation_schema.ligue l, organisation_schema.joueurequipe q 
-, organisation_schema.sport s
-where e.idligue=l.idligue and e.idequipe = q.idequipe and l.idsport = s.idsport
-and s.nom = 'Soccer' and s.nom = 'BasketBall'
+SELECT count(q.idjoueur) from organisation_schema.equipe e, organisation_schema.ligue l, organisation_schema.joueurequipe q
+                    , organisation_schema.sport s
+                    where e.idligue=l.idligue and e.idequipe = q.idequipe and l.idsport = s.idsport and
+		    s.nom = 'Soccer'
+		    and q.idJoueur in (SELECT q.idjoueur from organisation_schema.equipe e, organisation_schema.ligue l, organisation_schema.joueurequipe q
+							    , organisation_schema.sport s
+							    where e.idligue=l.idligue and e.idequipe = q.idequipe and l.idsport = s.idsport and
+							    s.nom = 'BasketBall');
 
 --9. À quelle date est-ce que le gestionnaire de l’équipe «Barcelona Fc» de la ligue L001 a effectué
 -- le paiement pour la saison débutant le 12 janvier 2016?
