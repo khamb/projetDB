@@ -44,8 +44,8 @@
             <li class=""><a href="#" id="queriesButton" style="color: #33cc33;">Requetes</a></li>
             <li class=""><a href="#" id="affTeamButton">Equipes</a></li>
             <li class=""><a href="#" id="affComButton">Commanditaires</a></li>
-            <li class=""><a href="#">Matchs</a></li>
-            <li class=""><a href="#" id='' >Tournois</a></li>
+            <li class=""><a href="#" id='affMatchButton'>Matchs</a></li>
+            <li class=""><a href="#" id='affTournoiButton' >Tournois</a></li>
           </ul>
       </div>
     </nav>

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ $(document).ready(function() {
 
 
   $(".nav li").on("click", function() {
@@ -32,6 +32,24 @@ $(document).ready(function() {
 
   $('#affComButton').on('click', function(event) {
     $.get('afficheCommanditaire.php', function(data, status){
+      $('#corps ').html(data);
+    });
+  });
+
+  $('#affTeamButton').on('click', function(event) {
+    $.get('afficheTeam.php', function(data, status){
+      $('#corps ').html(data);
+    });
+  });
+
+  $('#affMatchButton').on('click', function(event) {
+    $.get('afficheMatch.php', function(data, status){
+      $('#corps ').html(data);
+    });
+  });
+
+  $('#affTournoiButton').on('click', function(event) {
+    $.get('afficheTournoi.php', function(data, status){
       $('#corps ').html(data);
     });
   });

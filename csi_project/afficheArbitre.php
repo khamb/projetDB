@@ -20,7 +20,7 @@
           <li class='list-group-item'> <strong> Prenom: </strong> ".$donnee[0]."</li>
           <li class='list-group-item'> <strong> Nom: </strong>".$donnee[1]."</li>
           <br>
-          <button class= 'btn btn-default btn-lg pull-right'><i class='glyphicon glyphicon-remove'> </i></button>";
+          ";
       echo "</div>";
     }
 ?>

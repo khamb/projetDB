@@ -9,7 +9,7 @@
   pg_query($serveur," set search_path = organisation_schema");
 
 
-  $query1 = pg_query($serveur, "SELECT * FROM ligue");
+  $query1 = pg_query($serveur, "SELECT idLigue,difficulte,nom FROM ligue, sport WHERE ligue.idSport = sport.idSport");
 
   echo "<h2>Liste des Ligues</h2> <hr> <br>";
 
@@ -19,6 +19,7 @@
       echo "<ul class='list-group'>
       <li class='list-group-item'> <strong> Ligue N~: </strong> ".$donnee[0]."</li>
       <li class='list-group-item'> <strong> Difficulte: </strong>".$donnee[1]."</li>
+      <li class='list-group-item'> <strong> Sport: </strong>".$donnee[2]."</li>
       <br>
       <button class= 'voir-equ btn btn-default btn-lg pull-right' id='$donnee[0]'  > Voir Equipes</button>";
       echo "</div>";
@@ -50,7 +51,7 @@
       $('.voir-equ').on('click', function(event) {
         var tmp = $(this).attr('id');
 
-        $.post('afficheTeam.php',{idLigue: tmp}, function(data,status,xhr) {
+        $.post('afficheLigueTeam.php',{idLigue: tmp}, function(data,status,xhr) {
             $('#modalEquipeLigue').html(data);
             $('.modalContainerEL').modal('toggle');
         });
