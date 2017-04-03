@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS organisation_schema.JoueurEquipe(
 		idJoueur VARCHAR(10) NOT NULL,
 		PRIMARY KEY (idJoueur, idEquipe),
 		FOREIGN KEY (idEquipe) REFERENCES organisation_schema.Equipe(idEquipe),
-		FOREIGN KEY (idJoueur) REFERENCES organisation_schema.Joueur(idJoueur)		
+		FOREIGN KEY (idJoueur) REFERENCES organisation_schema.Joueur(idJoueur) ON UPDATE CASCADE ON DELETE CASCADE 		
 		);
 
 

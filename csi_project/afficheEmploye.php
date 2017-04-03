@@ -21,15 +21,30 @@
           <li class='list-group-item'> <strong> Nom: </strong>".$donnee[2]."</li>
           <li class='list-group-item'> <strong> Role: </strong>".$donnee[3]."</li>
           <br>
-          <button class= 'btn btn-default btn-lg pull-right'><i class='glyphicon glyphicon-remove'> </i></button>
+          <button class= 'btn btn-default btn-lg pull-right' data-toggle='modal' data-target='#delEmpModal-$donnee[0]'><i class='glyphicon glyphicon-remove'> </i></button>
           <button class= 'btn btn-default btn-lg pull-right' data-toggle='modal' data-target='#editEmpModal-$donnee[0]'><i class='glyphicon glyphicon-pencil'> </i></button> ";
+
+      //MODAL POUR confirmer suppression joueur
+      echo "<div class='modal fade' id='delEmpModal-$donnee[0]' tabindex='-1' role='dialog' aria-labelledby='delEmpModal'>
+              <div class='modal-dialog' role='document'>
+                <div class='modal-content'>
+                  <div class='modal-body'>
+                    <h4>Voulez-vous VRAIMENT supprimer cet employe?</h4>
+                  </div>
+                  <div class='modal-footer'>
+                    <button class= 'btn btn-primary btn-lg pull-right' name='$donnee[0]' onclick='deleteEmploye(name)' data-dismiss='modal'>Oui</button>
+                    <button class= 'btn btn-default btn-lg pull-right' data-dismiss='modal' >Non</button>
+                  </div>
+                </div>
+              </div>
+            </div>";
 
           //form for updating employee informations
       echo "<div class='modal fade' id='editEmpModal-$donnee[0]' tabindex='-1' role='dialog' aria-labelledby='editEmpModal'>
               <div class='modal-dialog' role='document'>
                 <div class='modal-content'>
                   <div class='modal-header'>
-                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                    <button type='button' class='close' data-dismiss='modal'  aria-label='Close'><span aria-hidden='true'>&times;</span></button>
                     <h4 class='modal-title'>Modifier les infos de l'Employe</h4>
                   </div>
                   <div class='modal-body'>
@@ -91,8 +106,20 @@
             $("#corps").html(data);
           });
         });
-
       }
+
+      function deleteEmploye(idEmp){
+        var tmpId = {id: idEmp};
+
+        $.post('deleteEmploye.php', tmpId, function(data, textStatus, xhr) {
+
+          //mettre a jour automatiquement la vue des employes apres suppression
+          $.get('afficheEmploye.php', function(data, status){
+            $("#corps").html(data);
+          });
+        });
+      }
+
     </script>
 
   </body>
