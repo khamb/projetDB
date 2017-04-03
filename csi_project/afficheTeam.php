@@ -23,12 +23,12 @@
           <li class='list-group-item'> <strong> maximum joueurs: </strong>".$donnee[4]."</li>
           <li class='list-group-item'> <strong> minimum joueurs: </strong>".$donnee[5]."</li>
           <br>
-          <button class= 'btn btn-default btn-lg pull-right'><i class='glyphicon glyphicon-remove'> </i></button>
-          <button class= 'btn btn-primary btn-lg pull-right' data-toggle='modal' data-target='#$donnee[0]'><i class='glyphicon glyphicon-plus'></i></button>";
+          <button class= 'btn btn-primary btn-lg pull-right' data-toggle='modal' data-target='#ajTeam-$donnee[0]'><i class='glyphicon glyphicon-plus'></i></button>
+          <button class= 'btn btn-default btn-lg pull-right' name='$donnee[0]' onclick='montrerJoueurs(name)' ><i class='glyphicon glyphicon-th-list'> </i></button>";
 
 
       //modal pour ajouter un nouveau joueur
-      echo "<div class='modal fade' id='$donnee[0]' tabindex='-1' role='dialog' aria-labelledby='editEmpModal'>
+      echo "<div class='modal fade' id='ajTeam-$donnee[0]' tabindex='-1' role='dialog' aria-labelledby='editEmpModal'>
               <div class='modal-dialog' role='document'>
                 <div class='modal-content'>
                   <div class='modal-header'>
@@ -38,6 +38,11 @@
                   <div class='modal-body'>
 
                     <form class='' action='' method='post'>
+                      <div class='form-group'>
+                        <label for='Id'>Id</label>
+                        <input type='text' class='form-control' id='id-$donnee[0]' placeholder='ex j40...'>
+                      </div>
+
                       <div class='form-group'>
                         <label for='prenom'>Prenom</label>
                         <input type='text' class='form-control' id='prenom-$donnee[0]'>
@@ -49,13 +54,13 @@
                       </div>
 
                       <div class='form-group'>
-                        <label for='role'> Courriel</label>
-                        <input type='text' class='form-control' id='role-$donnee[0]' >
+                        <label for='courriel'> Courriel</label>
+                        <input type='email' class='form-control' id='courriel-$donnee[0]' >
                       </div>
 
                       <div class='form-group'>
-                        <label for='role'> Tel</label>
-                        <input type='text' class='form-control' id='role-$donnee[0]' >
+                        <label for='tel'> Tel</label>
+                        <input type='text' class='form-control' id='tel-$donnee[0]' >
                       </div>
 
                     </form>
@@ -63,13 +68,83 @@
                   </div>
                   <div class='modal-footer'>
                     <button type='button' class='btn btn-default' data-dismiss='modal'>Annuler</button>
-                    <button type='button' class='btn btn-primary' id='$donnee[0]' onclick='updateEmploye(id)' data-dismiss='modal'>Enregistrer</button>
+                    <button type='button' class='btn btn-primary' id='$donnee[0]' onclick='ajouteJoueur(id)' data-dismiss='modal'>Enregistrer</button>
                   </div>
                 </div>
               </div>
             </div>";
 
 
+        //MODAL POUR MONTRER DANS UN TABLEAU LA LISTE DES JOUEURS DE L'EQUIPE
+        echo "<div class='modal fade' id='tablePlayer-$donnee[0]' tabindex='-1' role='dialog' aria-labelledby='tablePlayerModal'>
+                <div class='modal-dialog' role='document'>
+                  <div class='modal-content'>
+                    <div class='modal-header'>
+                      <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                      <h3 class='modal-title'>Liste des joueurs de l'equipe</h3>
+                    </div>
+                    <div class='modal-body' id='tablePlayerBody-$donnee[0]'>
+
+
+                    </div>
+                    <div class='modal-footer'>
+                      <button type='button' class='btn btn-default' data-dismiss='modal'>Fermer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>";
+
+
       echo "</div>";
     }
 ?>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-3.2.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      function ajouteJoueur(idEqu){
+
+        var tmpData = {
+          idTeam: idEqu,
+          id: $('#id-'+idEqu).val(),
+          prenom: $('#prenom-'+idEqu).val(),
+          nom: $('#nom-'+idEqu).val(),
+          courriel: $('#courriel-'+idEqu).val(),
+          tel: $('#tel-'+idEqu).val()
+        }
+
+        $.post('addJoueurTeam.php', tmpData, function(data, textStatus, xhr) {
+          //mettre a jour automatiquement la vue
+          $.get('afficheTeam.php', function(data, status){
+            $("#corps").html(data);
+          });
+        });
+      }
+
+      function montrerJoueurs(idEqu){
+
+        var tmpData = {idTeam: idEqu};
+
+        $.post('afficheTeamPlayers.php', tmpData, function(data, textStatus, xhr) {
+
+          $("#tablePlayerBody-"+idEqu).html(data);
+          $("#tablePlayer-"+idEqu).modal('toggle');
+        });
+
+      }
+
+
+
+    </script>
+
+  </body>
+
+</html>

@@ -38,7 +38,7 @@
 
   $('#affTeamButton').on('click', function(event) {
     $.get('afficheTeam.php', function(data, status){
-      $('#corps ').html(data);
+      $('#corps').html(data);
     });
   });
 

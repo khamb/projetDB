@@ -138,8 +138,8 @@ insert into organisation_schema.GerantEquipe (idgerantEqu, idJoueur, Diplome) va
 
 
 --Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi)
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq1', 'Barcelona Fc', 'L001', '2', '7', 'm1', 'ge1', '12/1/2016', '4325', 'T110');
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq2', 'Real Madrid', 'L002', '2', '7', 'm2', 'ge1', '12/1/2016', '4326', 'T110');
+insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq1', 'Barcelona Fc', 'L001', '2', '17', 'm1', 'ge1', '12/1/2016', '4325', 'T110');
+insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq2', 'Real Madrid', 'L002', '2', '17', 'm2', 'ge1', '12/1/2016', '4326', 'T110');
 insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq3', 'Paris SG', 'L001', '2', '7', 'm1', 'ge2', '12/1/2016', '4327', 'T110');
 insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq4', 'Arsenal Fc', 'L002', '2', '7', 'm2', 'ge2', '12/1/2016', '4328', 'T111');
 insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq5', 'Canada', 'L003', '2', '7', 'm4', 'ge4', '12/1/2016', '4378', 'T111');
@@ -155,14 +155,14 @@ insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j3', 
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j4', 'eq1');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j5', 'eq1');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j6', 'eq1');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j7', 'eq1');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j8', 'eq1');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j9', 'eq1');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j7', 'eq3');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j8', 'eq3');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j9', 'eq3');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j10', 'eq1');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j11', 'eq1');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j12', 'eq1');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j13', 'eq1');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j14', 'eq1');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j13', 'eq5');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j14', 'eq5');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j15', 'eq1');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j16', 'eq1');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j17', 'eq1');
@@ -171,17 +171,17 @@ insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j19',
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j20', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j21', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j22', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j23', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j24', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j25', 'eq2');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j23', 'eq4');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j24', 'eq4');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j25', 'eq4');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j26', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j27', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j28', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j29', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j30', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j31', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j32', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j33', 'eq2');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j29', 'eq6');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j30', 'eq6');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j31', 'eq6');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j32', 'eq6');
+insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j33', 'eq6');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j7', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j8', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j1', 'eq2');

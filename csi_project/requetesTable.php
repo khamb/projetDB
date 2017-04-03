@@ -21,7 +21,7 @@
           <tr>
             <td>1</td>
             <td>
-              Quelles sont les équipes qui comportent plus de 17 joueurs, toutes ligues confondues?
+              Quelles sont les équipes qui comportent plus de 8 joueurs, toutes ligues confondues?
               (Lister les équipes en ordre alphabétique selon le nom de l’équipe)
             </td>
             <td><button type='button' class='btn btn-primary' id='button1'>Executer</button></td>

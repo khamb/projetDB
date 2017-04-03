@@ -6,7 +6,7 @@
   pg_query($serveur, "set search_path = organisation_schema");
   $pressedButton = $_POST['buttonId'];
 
-  
+
   //afficher les resultats des requetes
   switch ($pressedButton) {
     case 'button1':
@@ -21,11 +21,10 @@
             <th>Nom Equipe</th>
             </tr>";
       $i=1;
-      $query1 = pg_query($serveur, "SELECT b.nom,  count (idjoueur)>17 from organisation_schema.joueurequipe a, organisation_schema.equipe b
+      $query1 = pg_query($serveur, "SELECT b.nom from organisation_schema.joueurequipe a, organisation_schema.equipe b
                       where a.idequipe = b.idequipe
-                      group by a.idequipe, b.nom
-                      order by b.nom
-                      ");
+                      group by b.nom having count (idjoueur)>8
+                      order by b.nom  ");
       while ($donnee = pg_fetch_row($query1))
         {
           echo "<tr class=''>
