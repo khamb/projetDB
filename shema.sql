@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS organisation_schema.Arbitre(
 		idEmploye	  	VARCHAR(10)		NOT NULL,
 		idMatch 	VARCHAR(10)			NOT NULL,
 		PRIMARY KEY (idArbitre),
-		FOREIGN KEY (idMatch) REFERENCES organisation_schema.Match(idMatch) 
+		FOREIGN KEY (idMatch) REFERENCES organisation_schema.Match(idMatch), 
 		FOREIGN KEY (idEmploye) REFERENCES organisation_schema.Employe(idEmploye)
 		);
 
