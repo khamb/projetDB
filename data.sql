@@ -138,14 +138,12 @@ insert into organisation_schema.GerantEquipe (idgerantEqu, idJoueur, Diplome) va
 
 
 --Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi)
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq1', 'Barcelona Fc', 'L001', '2', '17', 'm1', 'ge1', '12/1/2016', '4325', 'T110');
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq2', 'Real Madrid', 'L002', '2', '17', 'm2', 'ge1', '12/1/2016', '4326', 'T110');
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq3', 'Paris SG', 'L001', '2', '7', 'm1', 'ge2', '12/1/2016', '4327', 'T110');
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq4', 'Arsenal Fc', 'L002', '2', '7', 'm2', 'ge2', '12/1/2016', '4328', 'T111');
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq5', 'Canada', 'L003', '2', '7', 'm4', 'ge4', '12/1/2016', '4378', 'T111');
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq5', 'Brezil', 'L003', '2', '7', 'm4', 'ge4', '12/1/2016', '4379', 'T111');
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq5', 'Cameroun', 'L003', '2', '7', 'm3', 'ge3', '12/1/2016', '4329', 'T111');
-insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi) values ('eq6', 'Senegal', 'L003', '2', '7', 'm3', 'ge3', '12/1/2016', '4330', 'T111');
+insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi, nPoint) values ('eq1', 'Barcelona Fc', 'L001', '2', '17', 'm1', 'ge1', '12/1/2016', '4325', 'T110', '5');
+insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi, nPoint) values ('eq2', 'Real Madrid', 'L002', '2', '17', 'm2', 'ge1', '12/1/2016', '4326', 'T110', '4');
+insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi, nPoint) values ('eq3', 'Paris SG', 'L001', '2', '7', 'm1', 'ge2', '12/1/2016', '4327', 'T110', '2');
+insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi, nPoint) values ('eq4', 'Arsenal Fc', 'L002', '2', '7', 'm2', 'ge2', '12/1/2016', '4328', 'T111', '8');
+insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi, nPoint) values ('eq5', 'Canada', 'L003', '2', '7', 'm4', 'ge4', '12/1/2016', '4378', 'T111', '6');
+insert into organisation_schema.Equipe (idEquipe, nom, idLigue, minjoueur, maxjoueur, idMatch, idgerantEqu, datePaiement, derNumCarte, idTournoi, nPoint) values ('eq6', 'Senegal', 'L003', '2', '7', 'm3', 'ge3', '12/1/2016', '4330', 'T111', '3');
 
 
 --joueurEquipe (idJoueur, idEquipe)
