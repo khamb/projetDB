@@ -1,0 +1,12 @@
+Suppositions :
+
+1-	Un tournoi de charité  pratique un sport donné et est constitué de un à plusieurs matchs. 
+2-	Un gérant d’équipe gère un à plusieurs équipes
+3-	Une équipe est gérée par une seule équipe
+4-	Un gérant d’équipe est un joueur
+5-	Une ligue a un ou plusieurs gestionnaires
+6-	Une ligue a une ou plusieurs saisons
+7-	Une saison a une seule ligue. 
+8-	Une saison regroupe une à plusieurs équipes
+9-	trois arbitres soient dirigent aucun ou un seul match a un lieu précis
+10-	deux équipes jouent soit  aucun ou un match au même moment.
