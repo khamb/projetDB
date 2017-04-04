@@ -94,6 +94,7 @@ CREATE TABLE IF NOT EXISTS organisation_schema.Arbitre(
 		idMatch 	VARCHAR(10)			NOT NULL,
 		PRIMARY KEY (idArbitre),
 		FOREIGN KEY (idMatch) REFERENCES organisation_schema.Match(idMatch) 
+		FOREIGN KEY (idEmploye) REFERENCES organisation_schema.Employe(idEmploye)
 		);
 
 
@@ -118,6 +119,7 @@ CREATE TABLE IF NOT EXISTS organisation_schema.Equipe(
 		derNumCarte Numeric(4) not NULL,
 		maxJoueur integer NOT NULL,
 		minJoueur integer NOT NULL,
+		nPoint integer NOT null,
 		PRIMARY KEY (idEquipe),
 		FOREIGN KEY (idLigue) REFERENCES organisation_schema.Ligue(idLigue),
 		FOREIGN KEY (idMatch) REFERENCES organisation_schema.Match(idMatch),
