@@ -119,15 +119,15 @@ insert into organisation_schema.Match (idMatch, ddate, heure, lieu, idSaison, id
 
 
 
-insert into organisation_schema.Arbitre (idArbitre, idEmploye, idMatch) values ('a1', 'e1', 'm3');
-insert into organisation_schema.Arbitre (idArbitre, idEmploye, idMatch) values ('a2', 'e2', 'm2');
-insert into organisation_schema.Arbitre (idArbitre, idEmploye, idMatch) values ('a3', 'e3', 'm1');
-insert into organisation_schema.Arbitre (idArbitre, idEmploye, idMatch) values ('a4', 'e4', 'm2');
-insert into organisation_schema.Arbitre (idArbitre, idEmploye, idMatch) values ('a5', 'e5', 'm3');
-insert into organisation_schema.Arbitre (idArbitre, idEmploye, idMatch) values ('a6', 'e6', 'm2');
-insert into organisation_schema.Arbitre (idArbitre, idEmploye, idMatch) values ('a7', 'e7', 'm1');
-insert into organisation_schema.Arbitre (idArbitre, idEmploye, idMatch) values ('a8', 'e8', 'm1');
-insert into organisation_schema.Arbitre (idArbitre, idEmploye, idMatch) values ('a9', 'e9', 'm3');
+insert into organisation_schema.Arbitre (idArbitre, experience,idEmploye, idMatch) values ('a1','4', 'e1', 'm3');
+insert into organisation_schema.Arbitre (idArbitre, experience,idEmploye, idMatch) values ('a2', '4','e2', 'm2');
+insert into organisation_schema.Arbitre (idArbitre, experience,idEmploye, idMatch) values ('a3', '15','e3', 'm1');
+insert into organisation_schema.Arbitre (idArbitre,experience, idEmploye, idMatch) values ('a4', '1','e4', 'm2');
+insert into organisation_schema.Arbitre (idArbitre, experience, idEmploye, idMatch) values ('a5', '2','e5', 'm3');
+insert into organisation_schema.Arbitre (idArbitre, experience, idEmploye, idMatch) values ('a6', '1','e6', 'm2');
+insert into organisation_schema.Arbitre (idArbitre, experience, idEmploye, idMatch) values ('a7', '3','e7', 'm1');
+insert into organisation_schema.Arbitre (idArbitre, experience,idEmploye, idMatch) values ('a8', '5','e8', 'm1');
+insert into organisation_schema.Arbitre (idArbitre, experience, idEmploye, idMatch) values ('a9', '6','e9', 'm3');
 
 
 --GerantEquipe(idgerantEqu, idJoueur, Diplome)
