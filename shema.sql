@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS organisation_schema.GerantEquipe(
 		idJoueur	  	VARCHAR(10)		NOT NULL,
 		Diplome 	VARCHAR(10) NOT NULL,
 		PRIMARY KEY (idgerantEqu),
-		FOREIGN KEY (idJoueur) REFERENCES organisation_schema.Joueur(idJoueur)
+		FOREIGN KEY (idJoueur) REFERENCES organisation_schema.Joueur(idJoueur) ON UPDATE CASCADE ON DELETE CASCADE
 		);
 
 
@@ -122,9 +122,9 @@ CREATE TABLE IF NOT EXISTS organisation_schema.Equipe(
 		minJoueur integer NOT NULL,
 		nPoint integer NOT null,
 		PRIMARY KEY (idEquipe),
-		FOREIGN KEY (idLigue) REFERENCES organisation_schema.Ligue(idLigue),
+		FOREIGN KEY (idLigue) REFERENCES organisation_schema.Ligue(idLigue) ON UPDATE CASCADE,
 		FOREIGN KEY (idMatch) REFERENCES organisation_schema.Match(idMatch),
-		FOREIGN KEY (idgerantEqu) REFERENCES organisation_schema.GerantEquipe(idgerantEqu),
+		FOREIGN KEY (idgerantEqu) REFERENCES organisation_schema.GerantEquipe(idgerantEqu) ON UPDATE CASCADE ON DELETE CASCADE,
 		FOREIGN KEY (idTournoi) REFERENCES organisation_schema.TournoiCharite(idTournoi)
 		);
 
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS organisation_schema.JoueurEquipe(
 		idEquipe VARCHAR(10) NOT NULL,
 		idJoueur VARCHAR(10) NOT NULL,
 		PRIMARY KEY (idJoueur, idEquipe),
-		FOREIGN KEY (idEquipe) REFERENCES organisation_schema.Equipe(idEquipe),
+		FOREIGN KEY (idEquipe) REFERENCES organisation_schema.Equipe(idEquipe) ON UPDATE CASCADE ON DELETE CASCADE,
 		FOREIGN KEY (idJoueur) REFERENCES organisation_schema.Joueur(idJoueur)	ON UPDATE CASCADE ON DELETE CASCADE
 		);
 
@@ -160,7 +160,7 @@ CREATE TABLE IF NOT EXISTS organisation_schema.GestionnaireLigue(
 		idEmploye 	VARCHAR(10)			NOT NULL,
 		PRIMARY KEY (idgestionnaire),
 		FOREIGN KEY (idLigue) REFERENCES organisation_schema.Ligue(idLigue),
-		FOREIGN KEY (idEmploye) REFERENCES organisation_schema.Employe(idEmploye)
+		FOREIGN KEY (idEmploye) REFERENCES organisation_schema.Employe(idEmploye) ON UPDATE CASCADE ON DELETE CASCADE
 		);
 
 
@@ -169,7 +169,7 @@ CREATE TABLE IF NOT EXISTS organisation_schema.joueurSportPrefere(
 		idJoueur		VARCHAR(10)		NOT NULL,
 		idSport	  	VARCHAR(10)		NOT NULL,
 		PRIMARY KEY (idJoueur, idSport),
-		FOREIGN KEY (idJoueur) REFERENCES organisation_schema.Joueur(idJoueur),
+		FOREIGN KEY (idJoueur) REFERENCES organisation_schema.Joueur(idJoueur) ON UPDATE CASCADE ON DELETE CASCADE,
 		FOREIGN KEY (idSport) REFERENCES organisation_schema.sport(idSport)
 		);
 
@@ -180,6 +180,6 @@ CREATE TABLE IF NOT EXISTS organisation_schema.ArbitreSportPrefere(
 		idArbitre		VARCHAR(10)		NOT NULL,
 		idSport	  	VARCHAR(10)		NOT NULL,
 		PRIMARY KEY (idArbitre, idSport),
-		FOREIGN KEY (idArbitre) REFERENCES organisation_schema.Arbitre(idArbitre),
+		FOREIGN KEY (idArbitre) REFERENCES organisation_schema.Arbitre(idArbitre) ON UPDATE CASCADE ON DELETE CASCADE,
 		FOREIGN KEY (idSport) REFERENCES organisation_schema.sport(idSport)
 		);
