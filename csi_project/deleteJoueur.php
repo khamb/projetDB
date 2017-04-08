@@ -11,5 +11,4 @@
   pg_query($serveur," set search_path = organisation_schema");
 
   pg_query($serveur, "DELETE FROM joueur where idJoueur = '$currentId'");
-
 ?>

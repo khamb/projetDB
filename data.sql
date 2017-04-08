@@ -28,7 +28,7 @@ insert into organisation_schema.Employe (idEmploye, prenom, nom, role) values ('
 insert into organisation_schema.Employe (idEmploye, prenom, nom, role) values ('e22', 'David', 'Nichols', 'Technical Writer');
 insert into organisation_schema.Employe (idEmploye, prenom, nom, role) values ('e23', 'Alan', 'Peterson', 'Sales Representative');
 
-insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j1', 'Benjamin', 'Alexander', 'balexander0@berkeley.edu', '976-(430)946-2103', null);
+
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j2', 'Paula', 'Reid', 'preid1@hao123.com', '82-(620)955-5532', null);
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j3', 'Evelyn', 'Smith', 'ecarroll2@mit.edu', '47-(608)443-0862', null);
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j4', 'Ann', 'Howard', 'ahoward3@zimbio.com', '86-(742)357-2594', null);
@@ -43,6 +43,7 @@ insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, id
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j13', 'Julia', 'Ford', 'jfordc@rambler.ru', '55-(750)910-1903', null);
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j14', 'Dorothy', 'Jones', 'djonesd@netlog.com', '81-(988)482-9806', null);
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j15', 'Jose', 'Ortiz', 'jortize@eepurl.com', '357-(337)922-4649', null);
+insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j1', 'Benjamin', 'Alexander', 'balexander0@berkeley.edu', '976-(430)946-2103', null);
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j16', 'Marilyn', 'Brooks', 'mbrooksf@ucoz.ru', '86-(288)189-5865', null);
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j17', 'Nicole', 'Fowler', 'nfowlerg@sciencedirect.com', '7-(813)755-1773', null);
 insert into organisation_schema.Joueur (idJoueur, prenom, nom, courriel, tel, idEmploye) values ('j18', 'Phyllis', 'Little', 'plittleh@google.pl', '224-(917)779-6535', null);
@@ -182,7 +183,7 @@ insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j32',
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j33', 'eq6');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j7', 'eq2');
 insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j8', 'eq2');
-insert into organisation_schema.joueurEquipe (idJoueur, idEquipe) values ('j1', 'eq2');
+
 
 
 

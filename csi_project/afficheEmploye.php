@@ -9,7 +9,7 @@
   pg_query($serveur," set search_path = organisation_schema");
 
 
-  $query1 = pg_query($serveur, "SELECT * FROM employe ORDER BY nom");
+  $query1 = pg_query($serveur, "SELECT * FROM employe order by nom");
 
   echo "<h2>Liste des Employes</h2> <hr> <br>";
 

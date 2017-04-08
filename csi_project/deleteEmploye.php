@@ -10,6 +10,6 @@
 
   pg_query($serveur," set search_path = organisation_schema");
 
-  pg_query($serveur, "DELETE FROM employe where idEmploye = '$currentId'");
+  pg_query($serveur, "DELETE FROM organisation_schema.employe where idEmploye = '$currentId'");
 
 ?>

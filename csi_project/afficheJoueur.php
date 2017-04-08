@@ -9,7 +9,7 @@
   pg_query($serveur," set search_path = organisation_schema");
 
 
-  $query1 = pg_query($serveur, "SELECT * FROM joueur order by nom");
+  $query1 = pg_query($serveur, "SELECT * FROM joueur ");
 
   echo "<h2>Liste des Joueurs</h2> <hr> <br>";
 
